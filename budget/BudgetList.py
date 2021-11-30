@@ -1,2 +1,2 @@
-class BudgetList
+class BudgetList:
     pass
