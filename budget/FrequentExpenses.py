@@ -1,5 +1,6 @@
 import csv
 import collections
+import matplotlib.pyplot as plt
 from . import Expense
 
 expenses = Expense.Expenses()
@@ -15,4 +16,9 @@ print(spending_counter)
 
 top5 = spending_counter.most_common(5)
 
-categores, count = zip(*top5)
+categories, count = zip(*top5)
+fig, ax = plt.subplots()
+
+ax.bar(categories, count)
+ax.set_title('# of Purchases by Category')
+plt.show()
