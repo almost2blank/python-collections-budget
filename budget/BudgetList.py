@@ -7,4 +7,6 @@ class BudgetList():
         self.overages = []
 
     def append(self, item):
-        pass
+        if self.sum_expenses + item < self.budget:
+            self.expenses.append(item)
+            self.sum_expenses + item
