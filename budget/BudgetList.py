@@ -16,5 +16,5 @@ class BudgetList():
     def __len__(self):
         return self.expenses.len() + self.overages.len()
 
-def __main__():
+def main():
     myBudgetList = BudgetList(1200)
