@@ -1,4 +1,5 @@
 from . import Expense
+import matplotlib.pyplot as plt
 
 class BudgetList():
     def __init__(self, budget):
@@ -16,7 +17,7 @@ class BudgetList():
             self.overages.append(item)
             self.sum_overages = self.sum_overages + item
     def __len__(self):
-        return self.expenses.len() + self.overages.len()
+        return self.expenses.__len__() + self.overages.__len__()
 
     def __iter__(self):
         self.iter_e = iter(self.expenses)
@@ -40,6 +41,9 @@ def main():
 
     for entry in myBudgetList:
         print(entry)
+
+    fig, ax = plt.subplots()
+    labels = ['Expenses', 'Overages', 'Budget']
 
 if __name__ == "__main__":
     main()
