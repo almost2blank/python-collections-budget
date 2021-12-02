@@ -1,5 +1,7 @@
+from datetime import time
 from . import Expense
 import matplotlib.pyplot as plt
+import timeit
 
 def main():
     expenses = Expense.Expenses()
@@ -13,6 +15,8 @@ def main():
     for a,b in zip(divided_for_loop, divided_set_comp):
         if not (a.issubset(b) and b.issubset(a)):
             print("Sets are NOT equal by subset test")
+
+    timeit.timeit(stmt = "pass", setup = ,number=100000, globals=globals())
 
 if __name__ == "__main__":
     main()
