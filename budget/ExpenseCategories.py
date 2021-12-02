@@ -40,5 +40,8 @@ expenses.read_expenses('data/spending_data.csv')
     labels = ['Necessary', 'Food', 'Unnecessary']
     divided_expenses_sum = []
 
+    for category_exps in divided_set_comp:
+        divided_expenses_sum.append(sum(x.amount for x in category_exps))
+
 if __name__ == "__main__":
     main()
