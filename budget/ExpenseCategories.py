@@ -17,7 +17,7 @@ def main():
         if not (a.issubset(b) and b.issubset(a)):
             print("Sets are NOT equal by subset test")
 
-    
+    timeit.timeit(stmt = "pass", setup = ,number=100000, globals=globals())
 
 if __name__ == "__main__":
     main()
